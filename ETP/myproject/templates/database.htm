@@ -1,0 +1,22 @@
+{% extends 'base.htm' %}
+<!-- 1 -->
+{% block title %}
+<title border="5px;">Database</title>
+{% endblock %}
+<!-- 2 -->
+{% block content %}
+<table class="table table-striped table-bordered table-hover">
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">SensorValue</th>
+    <th scope="col">Time</th>
+  </tr>
+  {% for data in db %}
+  <tr>
+    <td>{{data.id}}</td>
+    <td>{{data.temp}}</td>
+    <td>{{data.time}}</td>
+    {% endfor %}
+  </tr>
+</table>
+{% endblock %}
